@@ -1,0 +1,26 @@
+.messageContainer {
+    clear: both;
+    /* background-color: blue; */
+    /* display: inline-block; */
+}
+
+.right {
+    float: right;
+    color: rgb(27, 28, 29);
+    padding: 0vw 3vw;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    margin: 2px;
+    background-color: rgb(235, 225, 225);
+}
+
+.left {
+    float: left;
+    color: rgb(27, 28, 29);
+    padding: 0vw 3vw;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    margin: 2px;
+    background-color: #88dde9;
+
+}
