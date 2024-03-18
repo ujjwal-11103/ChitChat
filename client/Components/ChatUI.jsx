@@ -7,7 +7,7 @@ import { data } from '../Components/Home'
 
 const ChatUI = () => {
 
-  const socket = useMemo(() => io("http://localhost:5000/"), [])
+  const socket = useMemo(() => io("https://chit-chat-wine-eta.vercel.app/"), [])
 
   useEffect(() => {
 
