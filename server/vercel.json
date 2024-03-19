@@ -11,7 +11,7 @@
             "src": "/(.*)",
             "dest": "/",
             "headers": {
-                "Access-Control-Allow-Origin": "http://localhost:5173",
+                "Access-Control-Allow-Origin": "https://chit-chat-9gp9.vercel.app/",
                 "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
                 "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
             }
