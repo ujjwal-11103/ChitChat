@@ -8,7 +8,7 @@ const app = express();
 const server = createServer(app)
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:5173",
+        origin: "https://vercel.com/ujjwal11103s-projects/chit-chat-9gp9",
         method: ['GET', 'POST'],
         credential: true
     }
