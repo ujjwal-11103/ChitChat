@@ -19,8 +19,9 @@
     ],
     "rewrites": [
         {
-            "source": "/socket.io/",
-            "destination": "https://chit-chat-wine-eta.vercel.app/"
+          "source": "/socket.io/:path*",
+          "destination": "https://chit-chat-wine-eta.vercel.app/socket.io/:path*"
         }
-    ]
+      ]
+      
 }
