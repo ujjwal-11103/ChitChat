@@ -9,12 +9,13 @@
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "/",
-            "headers": {
-                "Access-Control-Allow-Origin": "https://chit-chat-9gp9.vercel.app/",
-                "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
-                "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"
-            }
+            "dest": "./index.js"
+        }
+    ],
+    "rewrites": [
+        {
+            "source": "/socket.io/:path*",
+            "destination": "https://chit-chat-wine-eta.vercel.app/"
         }
     ]
 }

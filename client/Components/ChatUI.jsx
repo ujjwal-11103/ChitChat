@@ -7,7 +7,7 @@ import { data } from '../Components/Home'
 
 const ChatUI = () => {
 
-  const socket = useMemo(() => io("https://chitchat-752l.onrender.com/"), [])
+  const socket = useMemo(() => io("https://chit-chat-wine-eta.vercel.app/"), [])
 
   useEffect(() => {
 
