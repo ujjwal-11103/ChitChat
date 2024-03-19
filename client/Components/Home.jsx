@@ -27,7 +27,7 @@ const Home = () => {
                 <div className="home-container">
 
                     <div className="home-left">
-                        <img src="../public/images/1.png" alt="png" style={{ width: '22vw' }} />
+                        <img src="/images/1.png" alt="png" style={{ width: '22vw' }} />
                         {/* <img src="../public/images/2.png" alt="png" style={{ width: '29vw' }} /> */}
                     </div>
 

@@ -75,7 +75,7 @@ const ChatUI = () => {
         <div className="container">
 
           <div className="nav">
-            <img src="../public/logo.png" alt="logp" />
+            <img src="logo.png" alt="logp" />
             <h1>Chat Room</h1>
           </div>
 
