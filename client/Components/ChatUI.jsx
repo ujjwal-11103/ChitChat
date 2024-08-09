@@ -21,11 +21,10 @@ const ChatUI = () => {
   const [userId, setUserId] = useState("");
 
   const socket = useMemo(() => io(import.meta.env.VITE_SERVER_URL), []);
-  console.log("env" + import.meta.env.VITE_SERVER_URL);
+  console.log("env client" + import.meta.env.VITE_SERVER_URL);
 
 
   useEffect(() => {
-    const uploader = new SocketIOFileClient(socket);
 
     socket.on('connect', () => {
       console.log("You are now connected with id = " + socket.id);

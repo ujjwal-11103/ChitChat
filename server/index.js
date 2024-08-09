@@ -20,6 +20,7 @@ app.use(cors({
     origin: process.env.CLIENT_URL, // Change this to your client's address
 }));
 
+console.log("server :" + process.env.CLIENT_URL);
 
 const users = {};
 
@@ -56,9 +57,13 @@ io.on('connection', (socket) => {
 
 app.get('/', (req, res) => {
     res.send('Connected');
+    console.log("Connected log");
+
 });
 
 const port = process.env.PORT;
+console.log(port);
+
 
 server.listen(port, () => {
     console.log(`Server listening at port = ${port}`);
