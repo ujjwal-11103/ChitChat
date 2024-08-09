@@ -21,7 +21,7 @@ const ChatUI = () => {
   const [userId, setUserId] = useState("");
 
   const socket = useMemo(() => io(import.meta.env.VITE_SERVER_URL), []);
-  // console.log("env" + import.meta.env.VITE_SERVER_URL);
+  console.log("env" + import.meta.env.VITE_SERVER_URL);
 
 
   useEffect(() => {
