@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "proxy": "https://chit-chat-server1-ldygpj2a6-ujjwal11103s-projects.vercel.app/",
   "scripts": {
     "dev": "vite",
     "start": "vite",
