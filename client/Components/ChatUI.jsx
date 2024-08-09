@@ -20,8 +20,8 @@ const ChatUI = () => {
   const [allMessage, setAllMessage] = useState([]);
   const [userId, setUserId] = useState("");
 
-  const socket = useMemo(() => io(import.meta.env.VITE_SERVER_URL), []);
-  console.log("env client" + import.meta.env.VITE_SERVER_URL);
+  const socket = useMemo(() => io("https://chit-chat-server-pi.vercel.app/"), []);
+  console.log("env client" + "https://chit-chat-server-pi.vercel.app/");
 
 
   useEffect(() => {
