@@ -1,26 +1,27 @@
 .messageContainer {
-    clear: both;
-    /* background-color: blue; */
-    /* display: inline-block; */
+    clear: both;   
 }
 
+
 .right {
+    text-align: left;
     float: right;
     color: rgb(27, 28, 29);
-    padding: 0vw 3vw;
+    padding: 5px 40px;
     border: 1px solid transparent;
-    border-radius: 20px;
-    margin: 2px;
+    border-radius: 5px;
+    margin: 5px;
     background-color: rgb(235, 225, 225);
 }
+
 
 .left {
     float: left;
     color: rgb(27, 28, 29);
-    padding: 0vw 3vw;
     border: 1px solid transparent;
-    border-radius: 20px;
-    margin: 2px;
+    padding: 5px 40px;
+    border-radius: 5px;
+    margin: 3px;
     background-color: #88dde9;
-
 }
+

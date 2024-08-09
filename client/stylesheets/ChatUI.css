@@ -11,10 +11,9 @@ html {
 }
 
 .main {
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(to top, #4b6cb7, #182848);
-    /* background-color: aquamarine; */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #000428, #004e92);
 }
 
 .container {
@@ -26,6 +25,7 @@ html {
 .nav {
     width: 100%;
     height: 50px;
+    /* margin-bottom: 10px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,30 +42,16 @@ html {
     width: 100vw;
     height: calc(100vh - 120px);
     max-height: calc(100vh - 120px);
-    /* Set maximum height */
     overflow-y: auto;
-    /* Enable vertical scrolling when content overflows */
+    padding: 5px 5px;
     /* background-color: aqua; */
 }
 
-.mainBody .joined {
-    text-align: center;
-    margin-bottom: 2vw;
-}
-
-.mainBody h1 {
-    font-size: 1.8vw;
-}
-
-.mainBody .Your_messages {
-    text-align: right;
-    border: 1px solid black;
-}
 
 .inputArea {
     width: 100%;
     height: 70px;
-    padding: 5px;
+    /* padding: 5px; */
     /* top: calc(100vw - 70px); */
     display: flex;
     justify-content: center;
@@ -75,19 +61,19 @@ html {
 }
 
 .inputArea .form {
-    width: 96vw;
+    width: 100%;
     height: 100%;
     display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    padding: 3px;
+    justify-content: center;
     align-items: center;
+    gap: 20px;
+    /* padding: 3px; */
     /* background-color: yellow; */
 }
 
 .inputArea .input-text {
-    width: 90%;
-    height: 4vw;
+    /* width: 70%;
+    height: 4vw; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,39 +81,56 @@ html {
 }
 
 .inputArea input {
-    width: 100%;
-    height: 100%;
+    font-size: 1.2vw;
+    width: 50vw;
+    /* height: 100%; */
     outline: none;
     /* Remove outline on focus */
     font-weight: 500;
     padding: 20px;
     border: 1px solid transparent;
-    border-radius: 50px;
-    font-size: 1.1vw;
-}
-
-.inputArea .btn {
-    width: 130px;
-    height: 50px;
-    margin-right: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-color: blue; */
+    border-radius: 5px;
 }
 
 .inputArea button {
-    width: 100%;
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    padding: 11px 11px;
     border: 1px solid transparent;
-    border-radius: 50px;
-    transition: font-size 0.1s ease;
-    /* Smooth transition effect */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    background-color: rgb(149, 189, 255);
+
 }
 
-.btn :hover {
+.inputArea button:hover {
     cursor: pointer;
-    font-size: 17px;
+    background-color: rgb(95, 103, 248);
 }
 
 /* ---------------- */
+
+/* media queries */
+@media screen and (max-width:768px) {
+    .inputArea input {
+        font-size: 2.8vw;
+        width: 60vw;
+    }
+
+    .inputArea button {
+        font-size: 4vw;
+    }
+}
+
+@media screen and (max-width:490px) {
+
+    .inputArea input {
+        font-size: 4vw;
+    }
+
+    .inputArea button {
+        font-size: 6.5vw;
+    }
+}
