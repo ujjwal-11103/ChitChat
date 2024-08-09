@@ -1,21 +1,28 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { io } from 'socket.io-client';
+
 import SocketIOFileClient from 'socket.io-file-client';
+
 import Message from './Message';
 import { data, room } from '../Components/Home';
+
+
 import "../stylesheets/ChatUI.css";
 import '../stylesheets/Message.css';
 
 import { IoIosSend } from "react-icons/io";
 
 
+
+
 const ChatUI = () => {
   const [message, setMessage] = useState("");
   const [allMessage, setAllMessage] = useState([]);
   const [userId, setUserId] = useState("");
-  const [selectedFile, setSelectedFile] = useState(null);
 
-  const socket = useMemo(() => io("http://localhost:5000/"), []);
+  const socket = useMemo(() => io(import.meta.env.VITE_SERVER_URL), []);
+  // console.log("env" + import.meta.env.VITE_SERVER_URL);
+
 
   useEffect(() => {
     const uploader = new SocketIOFileClient(socket);
@@ -44,12 +51,6 @@ const ChatUI = () => {
 
     socket.on('discon', (mess) => {
       console.log("Disconnect client");
-      console.log(mess);
-      setAllMessage((allMessage) => [...allMessage, mess]);
-    });
-
-    socket.on('file', (mess) => {
-      console.log("File received");
       console.log(mess);
       setAllMessage((allMessage) => [...allMessage, mess]);
     });

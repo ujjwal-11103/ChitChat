@@ -19,6 +19,9 @@ const Home = () => {
         navigate("/chat")
     };
 
+    // console.log("env : " + import.meta.env.VITE_SERVER_URL);
+
+
     return (
         <div>
             <div className="home-main">
