@@ -19,7 +19,7 @@ const ChatUI = () => {
   const socket = useMemo(() => io(import.meta.env.VITE_SERVER_URL), []);
 
 
-  console.log("In chatUI.jsx");
+  console.log("In chatUI.jsx :");
 
   console.log(import.meta.env.VITE_SERVER_URL);
 
