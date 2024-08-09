@@ -11,14 +11,24 @@ dotenv.config();
 
 const io = new Server(server, {
     cors: {
-        origin: "https://chit-chat-client-five.vercel.app/", // Change this to your client's address
+        origin: "https://chit-chat-client-five.vercel.app",
         methods: ['GET', 'POST'],
+        credentials: true // Add this to allow credentials if needed
     },
 });
 
 app.use(cors({
-    origin: "https://chit-chat-client-five.vercel.app/", // Change this to your client's address
+    origin: "https://chit-chat-client-five.vercel.app",
+    methods: ['GET', 'POST'],
+    credentials: true, // Add this to allow credentials if needed
 }));
+
+
+// Add the middleware here
+io.use((socket, next) => {
+    socket.handshake.headers['Access-Control-Allow-Origin'] = "https://chit-chat-client-five.vercel.app";
+    next();
+});
 
 console.log("server :" + process.env.CLIENT_URL);
 

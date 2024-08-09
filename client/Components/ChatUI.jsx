@@ -31,9 +31,9 @@ const ChatUI = () => {
       setUserId(socket.id);
 
       // Emit join room event
+
       socket.emit('joinRoom', { userName: data, room: room });
     });
-
     const user = data;
     socket.emit('userName', user);
 
