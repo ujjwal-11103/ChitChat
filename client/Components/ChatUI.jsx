@@ -1,8 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { io } from 'socket.io-client';
 
-import SocketIOFileClient from 'socket.io-file-client';
-
 import Message from './Message';
 import { data, room } from '../Components/Home';
 
@@ -13,15 +11,17 @@ import '../stylesheets/Message.css';
 import { IoIosSend } from "react-icons/io";
 
 
-
-
 const ChatUI = () => {
   const [message, setMessage] = useState("");
   const [allMessage, setAllMessage] = useState([]);
   const [userId, setUserId] = useState("");
 
-  const socket = useMemo(() => io("https://chit-chat-server-pi.vercel.app/"), []);
-  console.log("env client" + "https://chit-chat-server-pi.vercel.app/");
+  const socket = useMemo(() => io(import.meta.env.VITE_SERVER_URL), []);
+
+
+  console.log("In chatUI.jsx");
+
+  console.log(import.meta.env.VITE_SERVER_URL);
 
 
   useEffect(() => {

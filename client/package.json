@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "proxy": "https://chit-chat-server1-ldygpj2a6-ujjwal11103s-projects.vercel.app/",
   "scripts": {
     "dev": "vite",
     "start": "vite",
@@ -15,8 +16,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^5.2.1",
     "react-router-dom": "^6.22.3",
-    "socket.io-client": "^4.7.4",
-    "socket.io-file-client": "^2.0.2"
+    "socket.io-client": "^4.7.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.64",
