@@ -44,7 +44,7 @@ io.on('connection', (socket) => {
         }
 
         const senderName = users[userId].userName;
-        console.log(`Message from ${senderName} in room ${room}: ${message}`);
+        // console.log(`Message from ${senderName} in room ${room}: ${message}`);
         io.to(room).emit('message', { messages: message, senderName, userId });
     });
 
@@ -61,7 +61,7 @@ io.on('connection', (socket) => {
 
 app.get('/', (req, res) => {
     res.send('Connected');
-    console.log("Connected log");
+    console.log("Server is on and on '/' route");
 
 });
 

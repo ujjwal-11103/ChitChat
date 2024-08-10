@@ -16,7 +16,7 @@ const ChatUI = () => {
   const [allMessage, setAllMessage] = useState([]);
   const [userId, setUserId] = useState("");
 
-  const socket = useMemo(() => io("https://chitchat-j35o.onrender.com/"), []);
+  const socket = useMemo(() => io(import.meta.env.VITE_SERVER_URL), []);
 
 
   console.log("In chatUI.jsx :");
