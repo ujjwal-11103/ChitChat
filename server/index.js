@@ -26,9 +26,6 @@ const io = new Server(server, {
 });
 
 
-
-console.log("server :" + process.env.CLIENT_URL);
-
 const users = {};
 
 io.on('connection', (socket) => {

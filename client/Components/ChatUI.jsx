@@ -16,12 +16,12 @@ const ChatUI = () => {
   const [allMessage, setAllMessage] = useState([]);
   const [userId, setUserId] = useState("");
 
-  const socket = useMemo(() => io(import.meta.env.VITE_SERVER_URL), []);
+  const socket = useMemo(() => io("http"), []);
 
 
   console.log("In chatUI.jsx :");
 
-  console.log(import.meta.env.VITE_SERVER_URL);
+  // console.log(import.meta.env.VITE_SERVER_URL);
 
 
   useEffect(() => {
