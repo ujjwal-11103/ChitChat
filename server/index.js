@@ -9,26 +9,23 @@ const server = createServer(app);
 
 dotenv.config();
 
+// Enable CORS for all origins in Express
+app.use(cors({
+    origin: "*", // Allow all origins
+    methods: ['GET', 'POST'],
+    credentials: true, // Enable credentials if needed
+}));
+
+// Enable CORS for all origins in Socket.io
 const io = new Server(server, {
     cors: {
-        origin: "https://chit-chat-client-five.vercel.app",
+        origin: "*", // Allow all origins
         methods: ['GET', 'POST'],
-        credentials: true // Add this to allow credentials if needed
+        credentials: true, // Enable credentials if needed
     },
 });
 
-app.use(cors({
-    origin: "https://chit-chat-client-five.vercel.app",
-    methods: ['GET', 'POST'],
-    credentials: true, // Add this to allow credentials if needed
-}));
 
-
-// Add the middleware here
-io.use((socket, next) => {
-    socket.handshake.headers['Access-Control-Allow-Origin'] = "https://chit-chat-client-five.vercel.app";
-    next();
-});
 
 console.log("server :" + process.env.CLIENT_URL);
 
